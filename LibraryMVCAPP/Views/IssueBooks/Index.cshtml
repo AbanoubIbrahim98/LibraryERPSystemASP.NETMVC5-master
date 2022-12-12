@@ -1,0 +1,82 @@
+﻿@model IEnumerable<LibraryMVCAPP.Models.IssueBook>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ReservedNoOfcopies)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeTable.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IssueCopies)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IssuesDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReturnDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Book.BookTitle)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReservedNoOfcopies)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeTable.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IssueCopies)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IssuesDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReturnDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Book.BookTitle)
+        </td>
+        <td>
+            @Html.ActionLink("Return Book", "ReturnBook", new { id=item.IssueBookID },new { @class = "btn btn-primary" }) |
+        
+        </td>
+    </tr>
+}
+
+</table>

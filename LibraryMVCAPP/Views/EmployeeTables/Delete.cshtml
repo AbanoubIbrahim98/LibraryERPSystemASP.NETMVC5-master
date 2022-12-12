@@ -1,0 +1,107 @@
+﻿@model LibraryMVCAPP.Models.EmployeeTable
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Delete Employee</h6>
+    </div>
+
+    <div class="card-body">
+        
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FullName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FullName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactNo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ContactNo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.FatherName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FatherName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.isActive)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.isActive)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Department.DepartmantName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Department.DepartmantName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Designation.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Designation.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User.Username)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User.Username)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+    </div>

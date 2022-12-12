@@ -1,0 +1,42 @@
+﻿@model LibraryMVCAPP.Models.BookType
+
+@{
+    ViewBag.Title = "Book Type";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Delete Book Type</h6>
+    </div>
+
+    <div class="card-body">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.User.Username)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.User.Username)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+    </div>

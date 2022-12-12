@@ -1,0 +1,43 @@
+﻿@model IEnumerable<LibraryMVCAPP.Models.UserType>
+
+@{
+    ViewBag.Title = "All Users Dashboard";
+}
+
+@Html.ActionLink("New User Type", "Create", null, new { @class = "btn btn-success" })
+<hr/>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">User Type List</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                        <tr>
+                            <th>
+                             <label>UserType</label>
+                            </th>
+                            <th></th>
+                        </tr>
+                        <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.UserType1)
+                                </td>
+                                <td class="btn-group">
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.UserTypeID },new {@class="btn btn-primary" }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.UserTypeID },new {@class="btn btn-info" }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.UserTypeID }, new {@class = "btn btn-danger" })
+                                </td>
+                            </tr>
+                        }
+
+                        </tbody>
+                    </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@model LibraryMVCAPP.Models.Department
+
+@{
+    ViewBag.Title = "Department";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary"> Department Details</h6>
+    </div>
+
+    <div class="card-body">
+        <div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.DepartmantName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DepartmantName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.User.Username)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.User.Username)
+                </dd>
+
+            </dl>
+        </div>
+        </div>
+</div>        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.DepartmentID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>

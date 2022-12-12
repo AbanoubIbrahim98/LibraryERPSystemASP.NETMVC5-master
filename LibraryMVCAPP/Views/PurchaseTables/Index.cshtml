@@ -1,0 +1,70 @@
+﻿@model IEnumerable<LibraryMVCAPP.Models.PurchaseTable>
+
+@{
+    ViewBag.Title = "Purchase";
+}
+
+@Html.ActionLink("New Purchase", "Create", null, new { @class = "btn btn-success" })
+<hr />
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Purchase List</h6>
+    </div>
+    <div class="card-body">
+
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PurchaseDate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PurchaseAmount)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Supplier.SupplierName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.User.Username)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Book.BookTitle)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PurchaseDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PurchaseAmount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Supplier.SupplierName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.User.Username)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Book.BookTitle)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.PurchaseID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.PurchaseID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.PurchaseID })
+                            </td>
+                        </tr>
+                    }
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

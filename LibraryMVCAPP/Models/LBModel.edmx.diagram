@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f77c058e6e3e4847ab4d00f17ed332f7" Name="Diagram1">
+        <EntityTypeShape EntityType="LibraryMVCModel.Book" Width="1.5" PointX="7.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMVCModel.BookFineTable" Width="1.5" PointX="12.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMVCModel.BookReturnTable" Width="1.5" PointX="12.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMVCModel.BookType" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMVCModel.Department" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMVCModel.Designation" Width="1.5" PointX="5.25" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMVCModel.EmployeeTable" Width="1.5" PointX="10.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMVCModel.IssueBook" Width="1.5" PointX="15.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMVCModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMVCModel.User" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryMVCModel.UserType" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <AssociationConnector Association="LibraryMVCModel.FK_Book_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_Book_User" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_BookFineTable_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_BookReturnTable_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_BookFineTable_EmployeeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_BookFineTable_User" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_BookReturnTable_EmployeeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_BookType_User" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_Department_User" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_EmployeeTable_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_Designation_User" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_EmployeeTable_Designation" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_EmployeeTable_User" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_IssueBook_EmployeeTable" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_IssueBook_User" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryMVCModel.FK_User_UserType" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LibraryMVCModel.Supplier" Width="1.5" PointX="3.375" PointY="0.75" />
+        <AssociationConnector Association="LibraryMVCModel.FK_Supplier_User" />
+        <EntityTypeShape EntityType="LibraryMVCModel.PurchaseTable" Width="1.5" PointX="5.875" PointY="2.625" />
+        <AssociationConnector Association="LibraryMVCModel.FK_PurchaseTable_Supplier" />
+        <AssociationConnector Association="LibraryMVCModel.FK_PurchaseTable_User" />
+        <AssociationConnector Association="LibraryMVCModel.FK_Book_BookType" />
+        <AssociationConnector Association="LibraryMVCModel.FK_PurchaseTable_Book" />
+        <AssociationConnector Association="LibraryMVCModel.FK_IssueBook_Book" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
